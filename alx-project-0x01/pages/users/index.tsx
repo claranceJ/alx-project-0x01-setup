@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { UserData } from "@/interfaces";
 import UserModal from "@/components/common/UserModal";
+import UserCard from "@/components/common/UserCard"; // Import UserCard
 
 /**
  * A page for managing users
@@ -36,11 +37,11 @@ const Users: React.FC<{ users: UserData[] }> = ({ users }) => {
           </button>
         </div>
         {/* User list */}
-        <ul>
+        <div className="grid grid-cols-3 gap-4">
           {userList.map((user) => (
-            <li key={user.id}>{user.name}</li>
+            <UserCard key={user.id} user={user} />
           ))}
-        </ul>
+        </div>
       </main>
 
       {/* Add User modal */}
