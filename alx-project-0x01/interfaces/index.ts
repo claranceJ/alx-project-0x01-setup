@@ -4,7 +4,7 @@ export interface PostProps {
     title: string;
     body: string;
 }
-  
+/////////////////////////
 
 // Geo interface represents the geographical coordinates of a user's address
 export interface Geo {
@@ -38,5 +38,20 @@ export interface UserProps {
     phone: string;       // Phone number
     website: string;     // Website URL
     company: Company;    // Company details
+}
+////////////////////////
+
+// Interface for the structure of post data
+export interface PostData {
+    userId: number; // The ID of the user creating the post
+    id?: number; // Optional ID for the post (added after creation)
+    title: string; // The title of the post
+    body: string; // The content/body of the post
+}
+  
+// Interface for the props used in the PostModal component
+export interface PostModalProps {
+    onClose: () => void; // Function to close the modal
+    onSubmit: (post: PostData) => void; // Function to handle form submission with the new post
 }
   
