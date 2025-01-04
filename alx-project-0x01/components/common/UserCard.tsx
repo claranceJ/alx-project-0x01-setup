@@ -21,11 +21,13 @@ const UserCard: React.FC<UserProps> = ({ name, username, email, address, phone, 
         Website: <a href={`http://${website}`} className="text-blue-500">{website}</a>
       </p>
 
-      {/* Display the address */}
-      <p className="text-gray-600">Address: {address.street}, {address.city}</p>
+      {/* Display the address with optional chaining */}
+      <p className="text-gray-600">
+        Address: {address?.street}, {address?.city || "City not available"}
+      </p>
 
-      {/* Display the company name */}
-      <p className="text-gray-600">Company: {company.name}</p>
+      {/* Display the company name with optional chaining */}
+      <p className="text-gray-600">Company: {company?.name || "Company not available"}</p>
     </div>
   );
 };

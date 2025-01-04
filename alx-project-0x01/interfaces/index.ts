@@ -88,7 +88,7 @@ export interface Geo {
   }
   
   export interface UserModalProps {
-    onClose: () => void;
-    onSubmit: (user: UserData) => void;
+    onSubmit: (user: UserProps) => void; // Define the type for the onSubmit function
+    onClose: () => void; // Define the type for the onClose function
   }
   
