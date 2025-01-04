@@ -5,7 +5,7 @@ import { PostData, PostProps } from "@/interfaces"; // Interfaces
 import { useState } from "react"; // React state management
 
 // Functional component for the Posts page
-const Posts: React.FC<PostProps[]> = ({ posts }) => {
+const Posts: React.FC<{ posts: PostProps[] }> = ({ posts }) => {
   const [isModalOpen, setModalOpen] = useState(false); // State for modal visibility
   const [post, setPost] = useState<PostData | null>(null); // State for new post
 
